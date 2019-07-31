@@ -17,4 +17,18 @@ ozharvest
 ggplot(data = ozharvest, aes(x = Year, y= Revenue)) +
   geom_line()
 
-  
+foodbank <- read_csv("~/Documents/2019 Thesis Writing/Data/foodbank.csv")
+foodbank
+
+ggplot(data=foodbank, aes(x=year, y=govern_grant)) +
+  geom_line()
+
+ggplot(data=foodbank, aes(x=meal, y=revenue)) +
+  geom_line()
+
+plot1 <- foodbank%>%
+  select(year,donations, revenue, govern_grant)
+library(tidyverse)
+library(lubridate)
+ggplot(data=plot1, aes(x=year, y=donations)) +
+  geom_line()
