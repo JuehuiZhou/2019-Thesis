@@ -20,6 +20,7 @@ ggplot(data = ozharvest, aes(x = Year, y= Revenue)) +
 foodbank <- read_csv("~/Documents/2019 Thesis Writing/Data/foodbank.csv")
 foodbank
 
+
 ggplot(data=foodbank, aes(x=year, y=govern_grant)) +
   geom_line()
 
@@ -32,3 +33,17 @@ library(tidyverse)
 library(lubridate)
 ggplot(data=plot1, aes(x=year, y=donations)) +
   geom_line()
+
+str(foodbank)
+str(pzharvest)
+str(OzHarvest)
+
+str(SecondBite)
+
+#combining data frames
+fro_1 <- OzHarvest
+fro_2 <- SecondBite
+fro_rbind <- rbind(fro_1,fro_2)
+
+
+str(Se)
